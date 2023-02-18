@@ -1,0 +1,117 @@
+@import url('https://fonts.googleapis.com/css2?family=Varela+Round&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font: 10px 'Varela Round', sans-serif;
+  color: white;
+  text-transform: uppercase;
+  letter-spacing: 2.5px;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  background: darkred url("open-book.svg") no-repeat fixed center;
+  background-size: 100vh;
+}
+#game-container {
+  background-color: rgba(32, 32, 32, .5);
+  max-width: 440px;
+  margin: auto;
+  padding: 10px;
+}
+header {
+  font-size: 20px;
+  text-align: center;
+}
+#game-details {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+#game-details div:last-child {
+  text-align: right;
+}
+button {
+  font: 600 10px 'Varela Round', sans-serif;
+  color: white;
+  text-transform: uppercase;
+  letter-spacing: 2.5px;
+  background-color: black;
+  border: 0;
+  border-radius: 10px;
+  padding: 10px 15px;
+  display: none;
+}
+.score {
+  font-size: 15px;
+  display: block;
+  margin-top: 5px;
+}
+
+/*  C A R D   S T Y L E S  */
+
+.card {
+  position: relative;
+  width: 100px;
+  height: 100px;
+  border: 10px solid white;
+  border-radius: 10px;
+  box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.8);
+  margin: 20px;
+  display: inline-block;
+  cursor: pointer;
+}
+.card:hover {
+  border-color: gold;
+  box-shadow: 1px 1px 15px rgba(255, 215, 0, 0.9);
+}
+.face-down {
+  filter: brightness(0.0);
+}
+.matched {
+  border-color: gold;
+  box-shadow: 1px 1px 10px rgba(255, 215, 0, 0.8);
+}
+.red {
+  background-color: red;
+}
+.blue {
+  background-color: blue;
+}
+.yellow {
+  background-color: yellow;
+}
+.green {
+  background-color: green;
+}
+.orange {
+  background-color: orange;
+}
+.purple {
+  background-color: purple;
+}
+
+
+/* M E D I A   Q U E R I E S */
+
+@media screen and (max-width: 500px) {
+  body {
+    font-size: 8px;
+  }
+  #game-container {
+    max-width: 320px;
+  }
+  .card {
+    width: 80px;
+    height: 80px;
+    margin: 10px;
+  }
+  button {
+    padding: 10px;
+    font-size: 8px;
+  }
+
+}
